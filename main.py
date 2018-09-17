@@ -1,3 +1,5 @@
+# Selenium automates browsers https://www.seleniumhq.org/
+
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 import time
