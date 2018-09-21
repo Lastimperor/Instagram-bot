@@ -1,5 +1,7 @@
 # Selenium automates browsers https://www.seleniumhq.org/
 
+#The constructor will take the user’s mail and password as an argumen
+
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 import time
@@ -17,11 +19,15 @@ class InstagramBot():
 
         emailInput = self.browser.find_elements_by_css_selector('form input')[0]
         passwordInput = self.browser.find_elements_by_css_selector('form input')[1]
+        
+# Selenium will write the email and the password in the corresponding <input>.
 
         emailInput.send_keys(self.email)
         passwordInput.send_keys(self.password)
         passwordInput.send_keys(Keys.ENTER)
         time.sleep(2)
+
+#there are three different buttons on instragram profiles and the “Follow” one is the first in the list.  
 
     def followWithUsername(self, username):
         self.browser.get('https://www.instagram.com/' + username + '/')
